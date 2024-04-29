@@ -1,4 +1,4 @@
-서비스 사용법
+Usage
 =====
 
 .. _registration:
