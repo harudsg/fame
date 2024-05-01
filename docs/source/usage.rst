@@ -55,25 +55,33 @@ Usage
 
 **1. 로그인**
 
-- **API 엔드포인트**: **`/login`**
-- **메소드**: **`POST`**
-- **요청 예시**:
+.. http:post:: /api/v1/auth/login
+   :noindex:
    
+     아이디 패스워드 기반 로그인을 통한 인증 토큰 (JWT) 발급
+	 
+   :form string: email (*required*) -- 사용자 email address (id)
+   :form string: password (*required*) -- 사용자 패스워드
+   
+   :requestheader Authorization: `token`
+   
+.. important::
+   중요사항 추가.
+
+**Example Request**
+
+.. sourcecode:: bash
+  
+   curl -s -H "Authorization: {Bearer}" curl -X POST https://fictionallibrary.com/libapi/book -d '{"email": "user@example.com", "password": "your_password"}' 
+
+**Example Response** JWT가 포함된 응답을 받습니다.
+
 .. sourcecode:: json
 
-        {
-            "email": "user@example.com",
-            "password": "your_password"
-        }
-    
-- **성공 응답**: JWT가 포함된 응답을 받습니다.
-    
-    ```json
-    {
+   {
       "token": "eyJhbGciOiJIUzI1NiIsInR...",
       "expires": "2024-04-12T18:25:43.511Z"
-    }
-    ```
+   }
 
 **2. JWT 발급**
 
