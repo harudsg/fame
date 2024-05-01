@@ -1,6 +1,7 @@
 @ECHO OFF
 
 pushd %~dp0
+pip install sphinx_rtd_theme
 
 REM Command file for Sphinx documentation
 
