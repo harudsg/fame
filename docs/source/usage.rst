@@ -58,12 +58,13 @@ Usage
 - **API 엔드포인트**: **`/login`**
 - **메소드**: **`POST`**
 - **요청 예시**:
-    
+   
 .. sourcecode:: json
-{
-  "email": "user@example.com",
-  "password": "your_password"
-}
+
+        {
+            "email": "user@example.com",
+            "password": "your_password"
+        }
     
 - **성공 응답**: JWT가 포함된 응답을 받습니다.
     
