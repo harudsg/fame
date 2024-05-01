@@ -57,8 +57,8 @@ Usage
 
 .. http:post:: /api/v1/auth/login
    :noindex:
-   
-     아이디 패스워드 기반 로그인을 통한 인증 토큰 (JWT) 발급
+	
+	아이디 패스워드 기반 로그인을 통한 인증 토큰 (JWT) 발급
 	 
    :form string: email (*required*) -- 사용자 email address (id)
    :form string: password (*required*) -- 사용자 패스워드
