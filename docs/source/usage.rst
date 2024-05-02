@@ -1,4 +1,4 @@
-Usage
+기본활용
 =====
 
 .. _registration:
