@@ -7,6 +7,7 @@
 ------------
 
 본 서비스는 사전 서비스 내용 검토가 필요합니다. 아래 방법을 활용하여 서비스의 개요를 포함하여 간단한 검토 요청을 진행해 주세요. 
+
 - 이메일: support@sktelecom.com
 - 홈페이지: [fame.sktelecom.com](https://fame.sktelecom.com)
 
@@ -26,6 +27,7 @@ API 활용
 ------------
 
 이제 제공된 API 문서를 참조하여, 발급받은 인증 토큰을 사용하여 API를 활용할 수 있습니다. API 키로 인증하여 원하는 기능을 이용해보세요.
+
 - API 문서: [apidoc.fame.sktelecom.com] 
 
 서비스 이용 제한
