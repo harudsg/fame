@@ -1,19 +1,13 @@
-Welcome to Lumache's documentation!
+SKT FAME 서비스 활용
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+FAME 서비스 활용 문서 입니다. 
 
 .. note::
 
-   This project is under active development.
+  개발중인 프로젝트 입니다. 
 
-Contents
+내용
 --------
 
 .. toctree::
