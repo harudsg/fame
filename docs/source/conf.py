@@ -6,9 +6,9 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'FAME'
+copyright = '2024, FAME'
+author = 'FAME'
 
 release = '0.1'
 version = '0.1.0'
