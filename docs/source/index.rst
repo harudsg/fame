@@ -12,5 +12,6 @@ FAME 서비스 활용 문서 입니다.
 
 .. toctree::
 
-  procedure usage
+service
+usage
    
