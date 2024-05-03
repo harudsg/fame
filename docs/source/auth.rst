@@ -49,17 +49,17 @@
             "password": "string"
         }
      
-.. important::
-   중요사항 추가.
+    .. important::
+       중요사항 추가.
 
-**Example Response** JWT가 포함된 응답을 받습니다
+    **Example Response** JWT가 포함된 응답을 받습니다
 
-.. sourcecode:: json
-
-   {
-      "token": "eyJhbGciOiJIUzI1NiIsInR...",
-      "refreshToken": "eyDhbHciOiJIUzI1AiIsInW..."
-   }
+    .. sourcecode:: json
+    
+       {
+          "token": "eyJhbGciOiJIUzI1NiIsInR...",
+          "refreshToken": "eyDhbHciOiJIUzI1AiIsInW..."
+       }
 
 
 토큰 관리
@@ -106,17 +106,17 @@
             "token": "eyJhbGciOiJIUzI1NiIsInR..."
         }
      
-.. important::
-   중요사항 추가.
-
-**Example Response** JWT가 포함된 응답을 받습니다
-
-.. sourcecode:: json
-
-   {
-      "token": "eyJhbGciOiJIUzI1NiIsInR...",
-      "valid-until": "2024-04-01 24:00:00"
-   }
+    .. important::
+       중요사항 추가.
+    
+    **Example Response** JWT가 포함된 응답을 받습니다
+    
+    .. sourcecode:: json
+    
+       {
+          "token": "eyJhbGciOiJIUzI1NiIsInR...",
+          "valid-until": "2024-04-01 24:00:00"
+       }
 
 
 **2. 토큰 갱신**
@@ -160,17 +160,17 @@
             "refreshToken": "eyDhbHciOiJIUzI1AiIsInW..."
         }
      
-.. important::
-   중요사항 추가.
-
-**Example Response** 갱신된 JWT 와 갱신 토큰이 포함된 응답을 받습니다
-
-.. sourcecode:: json
-
-   {
-      "token": "eyJhbGciOiJIUzI1NiIsInR...",
-      "refreshToken": "eyDhbHciOiJIUzI1AiIsInW..."
-   }
+    .. important::
+       중요사항 추가.
+    
+    **Example Response** 갱신된 JWT 와 갱신 토큰이 포함된 응답을 받습니다
+    
+    .. sourcecode:: json
+    
+       {
+          "token": "eyJhbGciOiJIUzI1NiIsInR...",
+          "refreshToken": "eyDhbHciOiJIUzI1AiIsInW..."
+       }
 
 
 **3. 주의사항 및 기타**
