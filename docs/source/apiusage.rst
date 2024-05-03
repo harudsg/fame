@@ -21,12 +21,17 @@ FAME 은 대상 고객의 최근 통화 및 메시징 이력을 AI 기술로 분
    :noindex:
 	
 	대상 고객의 금융 범죄 연관 대상자와의 통화 및 메시징 기록 여부 제공. 기본 최근 24시간이며 날짜를 지정하여 조회할 수 있습니다. (최근 30일 제한)
-	 
-   :form string: target_user_id (*required*) -- 확인하고자 하는 고객 SKT ID (전화번호)
-   :form string: start_date -- 조회 시작 날짜 (명시 안 될 경우 최근 24시간 데이터 제공)
-   :form string: end_date -- 조회 종료 날짜 (명시 안 될 경우 최근 24시간 데이터 제공)
-   
+
    :requestheader Authorization: `token`
+
+**Example Request Body**
+.. sourcecode:: json
+
+   {
+   	"target_user_id": "string",
+	"start_date": "2024-05-03",
+	"end_date": "2024-05-03"
+   }
      
 .. important::
    중요사항 추가.
