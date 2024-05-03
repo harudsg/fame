@@ -18,20 +18,44 @@ FAME 은 대상 고객의 최근 통화 및 메시징 이력을 AI 기술로 분
 
 .. http:post:: /api/v1/fame/checkNumbers
 
-   :noindex:
-	
-	대상 고객의 금융 범죄 연관 대상자와의 통화 및 메시징 기록 여부 제공. 기본 최근 24시간이며 날짜를 지정하여 조회할 수 있습니다. (최근 30일 제한)
+    대상 고객의 금융 범죄 연관 대상자와의 통화 및 메시징 기록 여부 제공. 기본 최근 24시간이며 날짜를 지정하여 조회할 수 있습니다. (최근 30일 제한)
 
-   :requestheader Authorization: `token`
+    **Example request**:
 
-**Example Request Body**
-.. sourcecode:: json
+    .. tabs::
 
-   {
-   	"target_user_id": "string",
-	"start_date": "2024-05-03",
-	"end_date": "2024-05-03"
-   }
+        .. code-tab:: bash
+
+            $ curl \
+              -X POST \
+              -H "Authorization: Token <token>" https://skt.fame.com/api/v1/fame/checkNumbers \
+              -H "Content-Type: application/json" \
+              -d @body.json
+
+        .. code-tab:: python
+
+            import requests
+            import json
+            URL = 'https://skt.fame.com/api/v1/fame/checkNumbers'
+            TOKEN = '<token>'
+            HEADERS = {'Authorization': f'token {TOKEN}'}
+            data = json.load(open('body.json', 'rb'))
+            response = requests.post(
+                URL,
+                json=data,
+                headers=HEADERS,
+            )
+            print(response.json())
+
+    ``body.json`` 의 내용은 아래와 같습니다. 
+
+    .. sourcecode:: json
+
+        {
+            "target_user_id": "string",
+	    "start_date": "2024-05-03",
+            "end_date": "2024-05-03"
+        }
      
 .. important::
    중요사항 추가.
