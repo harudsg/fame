@@ -57,17 +57,17 @@ FAME 은 대상 고객의 최근 통화 및 메시징 이력을 AI 기술로 분
             "end_date": "2024-05-03"
         }
      
-.. important::
-   중요사항 추가.
-
-**Example Response** 최근 24 시간, 금융 범죄 연관 대상자와의 통화 및 메시징 횟수 제공
-
-.. sourcecode:: json
-
-   {
-      "user id": "id",
-      "abnormal_call_count": 5
-   }
+	.. important::
+	   중요사항 추가.
+	
+	**Example Response** 최근 24 시간, 금융 범죄 연관 대상자와의 통화 및 메시징 횟수 제공
+	
+	.. sourcecode:: json
+	
+	   {
+	      "user id": "id",
+	      "abnormal_call_count": 5
+	   }
 
 기기 및 개인정보 탈취 시도 방지
 ------------
@@ -120,21 +120,21 @@ FAME 은 고객이 실제 이동한 궤적을 SKT 의 고도화된 AI 위치 추
             "target_user_id": "string"
         }
      
-.. important::
-   중요사항 추가.
-
-**Example Response** 최근 1시간 동안의 위치 이력 정보 제공
-
-.. sourcecode:: json
-
-   {
-      "user id": "id",
-      "location history":[
-      	"d-10": "경기도 용인시 수지구 풍덕천1동",
-	"d-20": "부산시 해운대구 해운대동",
-	"d-30": "부산시 해운대구 해운대동",	
-	"d-40": "부산시 해운대구 해운대동",	
-	"d-50": "부산시 해운대구 해운대동",	
-	"d-60": "부산시 해운대구 해운대동"	
-      ]
-   }
+	.. important::
+	   중요사항 추가.
+	
+	**Example Response** 최근 1시간 동안의 위치 이력 정보 제공
+	
+	.. sourcecode:: json
+	
+	   {
+	      "user id": "id",
+	      "location history":[
+	      	"d-10": "경기도 용인시 수지구 풍덕천1동",
+		"d-20": "부산시 해운대구 해운대동",
+		"d-30": "부산시 해운대구 해운대동",	
+		"d-40": "부산시 해운대구 해운대동",	
+		"d-50": "부산시 해운대구 해운대동",	
+		"d-60": "부산시 해운대구 해운대동"	
+	      ]
+	   }
