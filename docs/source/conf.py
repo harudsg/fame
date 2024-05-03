@@ -22,7 +22,8 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
     'sphinxcontrib.httpdomain',
-    'sphinx.ext.autosectionlabel',
+    'sphinx.ext.autosectionlabel',    
+    "sphinx_tabs.tabs",
 ]
 
 intersphinx_mapping = {
