@@ -62,10 +62,10 @@ FAME 은 대상 고객의 최근 통화 및 메시징 이력을 AI 기술로 분
 
     .. sourcecode:: json
 	
-    {
-      "user id": "id",
-      "abnormal_call_count": 5
-    }
+	{
+		"user id": "id",
+		"abnormal_call_count": 5
+	}
 
 기기 및 개인정보 탈취 시도 방지
 ------------
