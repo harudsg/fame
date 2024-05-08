@@ -57,8 +57,8 @@ FAME 은 대상 고객의 최근 통화 및 메시징 이력을 AI 기술로 분
             "end_date": "2024-05-03"
         }
      
-	.. important::
-	   중요사항 추가.
+.. important::
+   중요사항 추가.
 	
 	**Example Response** 최근 24 시간, 금융 범죄 연관 대상자와의 통화 및 메시징 횟수 제공
 	
@@ -118,8 +118,8 @@ FAME 은 고객이 실제 이동한 궤적을 SKT 의 고도화된 AI 위치 추
             "target_user_id": "string"
         }
      
-	.. important::
-	   중요사항 추가.
+.. important::
+   중요사항 추가.
 	
 	**Example Response** 최근 1시간 동안의 위치 이력 정보 제공
 	
@@ -190,8 +190,8 @@ FAME 은 실제 신고 주체의 정확한 이용 도로 정보 및 이동 방�
             "target_user_id": "string"
         }
      
-	.. important::
-	   중요사항 추가.
+.. important::
+   중요사항 추가.
 	
 	**Example Response** 최근 1시간 동안의 이용 도로 및 이동 방향 정보 제공
 	
