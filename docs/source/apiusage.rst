@@ -72,8 +72,6 @@ FAME 은 대상 고객의 최근 통화 및 메시징 이력을 AI 기술로 분
 기기 및 개인정보 탈취 시도 방지
 ------------
 
-작업 중
-
 .. image:: ../img/fame_private.png
 
 
@@ -137,4 +135,70 @@ FAME 은 고객이 실제 이동한 궤적을 SKT 의 고도화된 AI 위치 추
 		"d-50": "부산시 해운대구 해운대동",	
 		"d-60": "부산시 해운대구 해운대동"	
 	      ]
+	   }
+
+
+불법 및 편법 보험 수취 방지
+------------
+
+.. image:: ../img/fame_private.png
+
+
+FAME 은 고도화된 위치 추정 기술을 활용하여 간선도로 이상의 도로에서 대상이 차량으로 이동 시 대상의 이동 도로, 위치, 이동 방향을 제공합니다. 아래와 같은 상황에서 해당 기능은 보험사가 신속한 사고 출동 처리 뿐 아니라 잠재적인 보험 사기를 방지할 수 있도록 돕습니다.
+
+- 교통 사고 발생 시 피보험자가 정확한 위치를 공유하지 못하여 긴급 차량 출동 등이 제한될 경우 (예: 경부고속도로 A 구간은 맞으나 상하행 구분이 안되는 경우)
+- 교통 사고 발생 시 피보험자는 해당 차량 탑승 중이 아니었음에도 보험금 수령을 요청한 경우
+
+FAME 은 실제 신고 주체의 정확한 이용 도로 정보 및 이동 방향 정보를 제공하므로 ➀ 신속한 긴급 차량 출동 대응 ➁ 신고 내용 진위 확인이 가능합니다.
+
+.. http:post:: /api/v1/fame/getTrafficDirections
+
+    대상 고객의 최근 1시간 동안 이용 도로 및 이동 방향 정보 제공 (정북 기준 각도)
+
+    **Example request**:
+
+    .. tabs::
+
+        .. code-tab:: bash
+
+            $ curl \
+              -X POST \
+              -H "Authorization: Token <token>" https://skt.fame.com/api/v1/fame/getTrafficDirections \
+              -H "Content-Type: application/json" \
+              -d @body.json
+
+        .. code-tab:: python
+
+            import requests
+            import json
+            URL = 'https://skt.fame.com/api/v1/fame/getTrafficDirections'
+            TOKEN = '<token>'
+            HEADERS = {'Authorization': f'token {TOKEN}'}
+            data = json.load(open('body.json', 'rb'))
+            response = requests.post(
+                URL,
+                json=data,
+                headers=HEADERS,
+            )
+            print(response.json())
+
+    ``body.json`` 의 내용은 아래와 같습니다. 
+
+    .. sourcecode:: json
+
+        {
+            "target_user_id": "string"
+        }
+     
+	.. important::
+	   중요사항 추가.
+	
+	**Example Response** 최근 1시간 동안의 이용 도로 및 이동 방향 정보 제공
+	
+	.. sourcecode:: json
+	
+	   {
+	      "user id": "id",
+	      "road": "강변북로",
+	      "direction": 180 	// 정북 기준 180도 (남향)
 	   }
