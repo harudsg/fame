@@ -57,19 +57,15 @@ FAME 은 대상 고객의 최근 통화 및 메시징 이력을 AI 기술로 분
             "end_date": "2024-05-03"
         }
 
+	
+    **Example Response** 최근 24 시간, 금융 범죄 연관 대상자와의 통화 및 메시징 횟수 제공
 
-    .. important::
-        중요사항 추가.
-
+    .. sourcecode:: json
 	
-	**Example Response** 최근 24 시간, 금융 범죄 연관 대상자와의 통화 및 메시징 횟수 제공
-	
-	.. sourcecode:: json
-	
-	   {
-	      "user id": "id",
-	      "abnormal_call_count": 5
-	   }
+    {
+      "user id": "id",
+      "abnormal_call_count": 5
+    }
 
 기기 및 개인정보 탈취 시도 방지
 ------------
