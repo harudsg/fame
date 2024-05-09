@@ -197,3 +197,64 @@ FAME 은 실제 신고 주체의 정확한 이용 도로 정보 및 이동 방�
         "road": "강변북로",
         "direction": 180 	// 정북 기준 180도 (남향)
       }
+
+작업대출 및 불법 보조금 수취 방지
+------------
+
+.. image:: ../img/fame_poi.png
+
+
+FAME 은 3개월간의 고객 이동 패턴을 분석하여 대상의 실제 거주지, 실제 업무 목적 체류 지역 (직장) 등의 주소 정보를 제공합니다. 이를 통해 다양한 형태의 대출 및 보조금 신청 상황에서 신청 서류의 거주지 및 직장 주소의 정합성과 유효성을 즉각적으로 판단할 수 있습니다. 
+FAME 의 해당 기능은 다양한 대국민 설문조사 데이터를 검증하는 데 이미 활용되어 높은 신뢰도를 바탕으로 제공됩니다.
+
+.. http:post:: /api/v1/fame/getPOILocations
+
+    대상 고객의 최근 1시간 동안 위치 이력 정보 제공 (10분 단위, 요구 사항에 따라 조회 기간 확대 협의)
+
+    **Example request**:
+
+    .. tabs::
+
+        .. code-tab:: bash
+
+            $ curl \
+              -X POST \
+              -H "Authorization: Token <token>" https://skt.fame.com/api/v1/fame/getPOILocations \
+              -H "Content-Type: application/json" \
+              -d @body.json
+
+        .. code-tab:: python
+
+            import requests
+            import json
+            URL = 'https://skt.fame.com/api/v1/fame/getPOILocations'
+            TOKEN = '<token>'
+            HEADERS = {'Authorization': f'token {TOKEN}'}
+            data = json.load(open('body.json', 'rb'))
+            response = requests.post(
+                URL,
+                json=data,
+                headers=HEADERS,
+            )
+            print(response.json())
+
+    ``body.json`` 의 내용은 아래와 같습니다. 
+
+    .. sourcecode:: json
+
+        {
+            "target_user_id": "string"
+        }
+     
+    .. important::
+	중요사항 추가.
+
+    **Example Response** 대상의 실제 주거 및 직장 위치 정보 제공
+
+    .. sourcecode:: json
+
+	{
+	  "user id": "id",
+	  "home address": 102931049 // 실제 주거 행정동 코드
+	  "work address": 110349240 // 실제 직장 행정동 코드
+	}
