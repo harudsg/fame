@@ -116,30 +116,30 @@ FAME 은 고객이 실제 이동한 궤적을 SKT 의 고도화된 AI 위치 추
             "target_user_id": "string"
         }
      
-.. important::
-   중요사항 추가.
-	
-	**Example Response** 최근 1시간 동안의 위치 이력 정보 제공
-	
-	.. sourcecode:: json
-	
-	   {
-	      "user id": "id",
-	      "location history":[
-	      	"d-10": "경기도 용인시 수지구 풍덕천1동",
-		"d-20": "부산시 해운대구 해운대동",
-		"d-30": "부산시 해운대구 해운대동",	
-		"d-40": "부산시 해운대구 해운대동",	
-		"d-50": "부산시 해운대구 해운대동",	
-		"d-60": "부산시 해운대구 해운대동"	
-	      ]
-	   }
+    .. important::
+	중요사항 추가.
+
+    **Example Response** 최근 1시간 동안의 위치 이력 정보 제공
+
+    .. sourcecode:: json
+
+	{
+	  "user id": "id",
+	  "location history":[
+	    "d-10": "경기도 용인시 수지구 풍덕천1동",
+	    "d-20": "부산시 해운대구 해운대동",
+	    "d-30": "부산시 해운대구 해운대동",	
+	    "d-40": "부산시 해운대구 해운대동",	
+	    "d-50": "부산시 해운대구 해운대동",	
+	    "d-60": "부산시 해운대구 해운대동"	
+	  ]
+	}
 
 
 불법 및 편법 보험 수취 방지
 ------------
 
-.. image:: ../img/fame_private.png
+.. image:: ../img/fame_insurance.png
 
 
 FAME 은 고도화된 위치 추정 기술을 활용하여 간선도로 이상의 도로에서 대상이 차량으로 이동 시 대상의 이동 도로, 위치, 이동 방향을 제공합니다. 아래와 같은 상황에서 해당 기능은 보험사가 신속한 사고 출동 처리 뿐 아니라 잠재적인 보험 사기를 방지할 수 있도록 돕습니다.
@@ -187,16 +187,13 @@ FAME 은 실제 신고 주체의 정확한 이용 도로 정보 및 이동 방�
         {
             "target_user_id": "string"
         }
-     
-.. important::
-   중요사항 추가.
+   
+    **Example Response** 최근 1시간 동안의 이용 도로 및 이동 방향 정보 제공
 	
-	**Example Response** 최근 1시간 동안의 이용 도로 및 이동 방향 정보 제공
-	
-	.. sourcecode:: json
-	
-	   {
-	      "user id": "id",
-	      "road": "강변북로",
-	      "direction": 180 	// 정북 기준 180도 (남향)
-	   }
+    .. sourcecode:: json
+	   
+      {
+        "user id": "id",
+        "road": "강변북로",
+        "direction": 180 	// 정북 기준 180도 (남향)
+      }
